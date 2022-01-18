@@ -8,7 +8,7 @@ from scipy.spatial.distance import pdist
 from sklearn.neighbors import KNeighborsClassifier
 import impyute as impy
 
-data = pd.read_csv('total.csv')
+data = pd.read_csv('data(no need commit)\\total.csv')
 date = data.loc[:, 'date']
 fs = data.loc[:, 'fs']
 llgl = data.loc[:, 'llgl']
@@ -123,4 +123,4 @@ for i in range(0, len(inputationData)):  # i是索引 x是值
 #     print(j)
 a = np.column_stack(
     [date, totaldata.loc[:, 'fs'], totaldata.loc[:, 'llgl'], totaldata.loc[:, 'gl']])
-pd.DataFrame(a).to_csv("填充后.csv", index=False, header=['date', 'fs', 'llgl', 'gl'])  # 写入文件
+pd.DataFrame(a).to_csv("data(no need commit)\\填充后.csv", index=False, header=['date', 'fs', 'llgl', 'gl'])  # 写入文件
